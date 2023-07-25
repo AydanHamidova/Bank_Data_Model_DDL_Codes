@@ -1,11 +1,7 @@
 -- Create tables section for banking database --
-
 -- Create Customer information table 
-
 -- if the customer is Company some columns should be null Ex: Gender, Is_married, Is_dead etc. 
-
 -- Therefore I have added check constraints on these columns. If specified value ('F','M') not added to the column the value will be null.
-
 create table customer
 ( Load_date date,
   ID number(8) not null, --PK
