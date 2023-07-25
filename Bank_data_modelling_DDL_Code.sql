@@ -34,7 +34,6 @@ Alter table customer
 Add constraint ID_PK Primary key(ID);
 
 -- Create ID_card information --
-
 create table Customer_Document
 (Load_date date,
  Client_ID number(8),-- FK
