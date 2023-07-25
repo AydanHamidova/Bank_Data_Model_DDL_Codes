@@ -25,7 +25,6 @@ create table customer
   );
   
 -- Add CHECK constraint on multiple column (when the table is already created)
-
 Alter table customer
 Add constraint CK_columns Check (Is_married in (0,1) and Is_Resident in (0,1) and Is_Dead in (0,1));
 
@@ -60,7 +59,6 @@ create  table Employee_info
   );
   
 -- Create Branch table --
-
 create table Branch
 ( Load_date date,
   Code varchar(3) not null, --PK
@@ -68,15 +66,13 @@ create table Branch
   Adress varchar(200),
   Phone varchar(20),
   Email varchar(50)
-  
 );
--- Add primary key --
 
+-- Add primary key --
 ALTER TABLE BRANCH 
 ADD CONSTRAINTS BRANCH_CODE_PK PRIMARY KEY(CODE);
 
 -- Create Product table --
-
 create table Product
 (Load_date date,
  Code varchar(4), --PK
@@ -121,7 +117,6 @@ create table Product
  Add constraints Account_ID_Pk Primary key (ID);
   
 -- CARD information --
-
 create  table card 
 ( load_date date, 
   ID number(8),--PK
@@ -141,7 +136,6 @@ create  table card
   ADD CONSTRAINT CARD_ID_PK PRIMARY KEY(ID);
 
 -- Credit Table --
-
 Create table credit_contracts
 (Load_date date,
 Bank_date date,
@@ -174,7 +168,6 @@ Constraint CK_write_off check( Write_off in (1,0))
 
 
 --- Create transaction table ---
-
 create table  transaction
 (Load_date date,
  Operation_date date not null,
@@ -189,8 +182,7 @@ create table  transaction
  CR_branch_code varchar(3),
  Amount number(18,2)not null);
  
- --ADD primary key --
- 
+ --ADD primary key -- 
  Alter table transaction
  ADD CONSTRAINT TR_ID PRIMARY KEY(ID);
  
@@ -214,12 +206,10 @@ INCREMENT BY 1
 CACHE 20;
  
 -- if you are truncate table you should reset sequence with this code:
-
 alter sequence seq_id restart start with 1;
 
 
---- Create relationships section ---
-
+--- Create relationship section ---
 Alter table customer
 ADD CONSTRAINT CUST_BRANCH_FK FOREIGN KEY( BRANCH_CODE)
 REFERENCES BRANCH(CODE);
@@ -286,9 +276,7 @@ ADD CONSTRAINTS TR_CL_IDFK FOREIGN KEY (CLIENT_ID)
 REFERENCES customer(ID);
 
 -- Create Trigger for modified column data in the tables --
-
 -- Trigger for amount column in transaction table. If amount modified by someone log_info table will contain with modified values
-
 CREATE OR REPLACE TRIGGER trg_log_for_trans_amount
   AFTER Delete or UPDATE or Insert  ON transaction
  FOR EACH ROW
@@ -343,7 +331,6 @@ END;
 
 
 -- Trigger for customer's salary information. When salary column modified by someone trigger will run and log_info table will contain with modified values.
-
 CREATE OR REPLACE TRIGGER trg_log_for_salary
   AFTER Delete or UPDATE or Insert  ON Employee_info
  FOR EACH ROW
