@@ -1,9 +1,11 @@
-# Bank_Data_Model_DDL_Codes
+Explanation for Bank_Data_Model
 
 I have created Bank Data Model which consists of a series of tables.
+
 These tables contain client information, credit information, transactions and etc.
 
-# Tables include:
+Tables include:
+
 Customer
 Customer_Document
 Employee_info
