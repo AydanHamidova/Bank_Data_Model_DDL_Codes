@@ -26,11 +26,20 @@ Foreign key is a constraint on specific column that creates a relationship betwe
 
 Also I have created 2 triggers for salary column on Employee_info table and Amount column on Transaction table. Therefore I created log_info table. When salary and amount column modfied by someone trigger will run and log_info table will contain with modified data. 
 Log_info table contains some important columns:
+
 Client_ID (for modified client data)
+
 Old_value (for old salary or transaction amount)
+
 New_value (for modified salary or transacyion amount)
+
 Log_date (modified date)
+
 Operation_type( inserting, deleting or updating)
+
 Table_Name ( for modified column's table name)
+
 Column_Name (for modified column's name)
+
 User_name ( The user who modified data)
+
