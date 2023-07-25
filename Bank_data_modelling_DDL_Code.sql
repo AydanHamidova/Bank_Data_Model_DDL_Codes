@@ -328,8 +328,6 @@ BEGIN
      username);
 END;
 
-
-
 -- Trigger for customer's salary information. When salary column modified by someone trigger will run and log_info table will contain with modified values.
 CREATE OR REPLACE TRIGGER trg_log_for_salary
   AFTER Delete or UPDATE or Insert  ON Employee_info
