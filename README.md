@@ -18,4 +18,7 @@ Credit_contracts
 Transaction
 log_info
 
-I have added constraints for these tables like primary key, not null, check, default. B
+I have added constraints for these tables like primary key, foreign key, not null, check, default.
+
+A Primary key is used to ensure that data in the specific column is unique. It cannot be a duplicate. A table cannot have more than one primary key.
+Foreign key is a column that creates a relationship between two tables.
