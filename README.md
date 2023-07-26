@@ -7,15 +7,25 @@ These tables contain client information, credit information, transactions and et
 Tables include:
 
 Customer
+
 Customer_Document
+
 Employee_info
+
 Branch
+
 Product
+
 Currency
+
 Account
+
 Card
+
 Credit_contracts
+
 Transaction
+
 log_info
 
 I have added constraints for these tables like primary key, foreign key, not null, check, default.
