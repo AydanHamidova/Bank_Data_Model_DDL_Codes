@@ -6,7 +6,7 @@ These tables contain client information, credit information, transactions and et
 
 Tables include:
 
-Customer
+Customer 
 
 Customer_Document
 
