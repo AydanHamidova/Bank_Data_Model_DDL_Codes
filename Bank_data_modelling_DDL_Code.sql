@@ -205,7 +205,7 @@ START WITH 1
 INCREMENT BY 1
 CACHE 20;
  
--- if you are truncate table you should reset sequence with this code:
+-- if you truncate table you should reset sequence with this code:
 alter sequence seq_id restart start with 1;
 
 
